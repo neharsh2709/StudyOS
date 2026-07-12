@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyOS | Study Planner</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="stylesheet" href="CSS/planner.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= Sidebar ================= -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>📚 StudyOS</h2>
+
+<p>Designed & Developed by</p>
+
+<span>Neharsh Shende</span>
+
+</div>
+
+<ul>
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="tasks.html">
+<i class="fa-solid fa-list-check"></i>
+Tasks
+</a>
+</li>
+
+<li class="active">
+<a href="#">
+<i class="fa-solid fa-calendar-days"></i>
+Planner
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-clock"></i>
+Focus Timer
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-fire"></i>
+Habits
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-book"></i>
+Notes
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-chart-line"></i>
+Analytics
+</a>
+</li>
+
+<li>
+<a href="#">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ================= Main ================= -->
+
+<main class="main">
+
+<header>
+
+<h1>📅 Study Planner</h1>
+
+<p>Plan your day and achieve your goals.</p>
+
+</header>
+
+<!-- ================= Planner Stats ================= -->
+
+<section class="planner-stats">
+
+<div class="stat-card">
+
+<h3>Total Sessions</h3>
+
+<h2 id="totalSessions">0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Completed</h3>
+
+<h2 id="completedSessions">0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Pending</h3>
+
+<h2 id="pendingSessions">0</h2>
+
+</div>
+
+</section>
+
+<!-- ================= Progress ================= -->
+
+<section class="progress-section">
+
+<div class="progress-header">
+
+<h3>Today's Progress</h3>
+
+<span id="progressText">0% Completed</span>
+
+</div>
+
+<div class="progress">
+
+<div id="progressBar" class="progress-bar"></div>
+
+</div>
+
+</section>
+<!-- ================= Add Study Session ================= -->
+
+<section class="planner-form">
+
+<input
+type="text"
+id="sessionTitle"
+placeholder="Enter study topic...">
+
+
+<select id="subject">
+
+<option value="Mathematics">
+📐 Mathematics
+</option>
+
+<option value="Physics">
+⚛️ Physics
+</option>
+
+<option value="Chemistry">
+🧪 Chemistry
+</option>
+
+<option value="English">
+📖 English
+</option>
+
+<option value="GK">
+🌍 General Knowledge
+</option>
+
+<option value="Other">
+📌 Other
+</option>
+
+</select>
+
+
+<select id="sessionPriority">
+
+<option value="High">
+🔴 High
+</option>
+
+<option value="Medium" selected>
+🟡 Medium
+</option>
+
+<option value="Low">
+🟢 Low
+</option>
+
+</select>
+
+
+<input
+type="date"
+id="sessionDate">
+
+
+<input
+type="time"
+id="startTime">
+
+
+<input
+type="time"
+id="endTime">
+
+
+<button id="addSessionBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Session
+
+</button>
+
+
+<button
+id="updateSessionBtn"
+style="display:none;">
+
+<i class="fa-solid fa-pen"></i>
+
+Update Session
+
+</button>
+
+</section>
+
+
+<!-- ================= Search ================= -->
+
+<section class="search-box">
+
+<input
+
+type="text"
+
+id="searchSession"
+
+placeholder="🔍 Search study sessions...">
+
+</section>
+
+
+<!-- ================= Timeline ================= -->
+
+<section class="timeline-container">
+
+<h2>
+
+📚 Today's Schedule
+
+</h2>
+
+
+<ul id="sessionList">
+
+<!-- Sessions added by JavaScript -->
+
+</ul>
+
+
+</section>
+<!-- ================= Footer ================= -->
+
+<footer>
+
+<p>
+
+StudyOS Planner v1
+
+<br>
+
+Designed & Developed by
+
+<b>Neharsh Shende</b>
+
+</p>
+
+</footer>
+
+
+</main>
+
+
+<!-- ================= JavaScript ================= -->
+
+<script src="js/planner.js"></script>
+
+
+</body>
+
+</html>
