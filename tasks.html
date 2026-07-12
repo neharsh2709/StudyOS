@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StudyOS | Smart Tasks</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/tasks.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>📚 StudyOS</h2>
+
+<p>Designed & Developed by</p>
+
+<span>Neharsh Shende</span>
+
+</div>
+
+<ul>
+
+<li><a href="index.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li class="active"><a href="#"><i class="fa-solid fa-list-check"></i> Tasks</a></li>
+
+<li><a href="planner.html"><i class="fa-solid fa-calendar"></i> Planner</a></li>
+
+<li><a href="timer.html"><i class="fa-solid fa-clock"></i> Timer</a></li>
+
+<li><a href="goals.html"><i class="fa-solid fa-bullseye"></i> Goals</a></li>
+
+<li><a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+
+<li><a href="habits.html"><i class="fa-solid fa-fire"></i> Habits</a></li>
+
+<li><a href="notes.html"><i class="fa-solid fa-book"></i> Notes</a></li>
+
+<li><a href="resources.html"><i class="fa-solid fa-folder"></i> Resources</a></li>
+
+<li><a href="exams.html"><i class="fa-solid fa-graduation-cap"></i> Exams</a></li>
+
+<li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+
+</ul>
+
+</aside>
+
+<!-- Main -->
+
+<main class="main">
+
+<header>
+
+<h1>📋 Smart To-Do List</h1>
+
+<p>Organize your studies efficiently.</p>
+
+</header>
+
+<!-- Statistics -->
+
+<section class="task-stats">
+
+<div class="stat-card">
+
+<h3>Total Tasks</h3>
+
+<h2 id="totalTasks">0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Completed</h3>
+
+<h2 id="completedTasks">0</h2>
+
+</div>
+
+<div class="stat-card">
+
+<h3>Pending</h3>
+
+<h2 id="pendingTasks">0</h2>
+
+</div>
+
+</section>
+
+<!-- Add Task -->
+
+<section class="task-form">
+
+<input
+type="text"
+id="taskInput"
+placeholder="Enter your task...">
+
+<select id="priority">
+
+<option>High</option>
+
+<option selected>Medium</option>
+
+<option>Low</option>
+
+</select>
+
+<input type="date" id="dueDate">
+
+<button id="addTaskBtn">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Task
+
+</button>
+
+</section>
+
+<!-- Search -->
+
+<section class="search-box">
+
+<input
+type="text"
+id="searchTask"
+placeholder="Search tasks...">
+
+</section>
+
+<!-- Task List -->
+
+<section>
+
+<ul id="taskList">
+
+<!-- Tasks will appear here -->
+
+</ul>
+
+</section>
+
+<footer>
+
+© 2026 StudyOS
+
+Designed & Developed by
+
+<b>Neharsh Shende</b>
+
+</footer>
+
+</main>
+
+<script src="js/tasks.js"></script>
+
+</body>
+</html>
