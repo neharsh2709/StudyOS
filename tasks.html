@@ -107,30 +107,28 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <section class="task-form">
 
-<input
-type="text"
-id="taskInput"
-placeholder="Enter your task...">
+    <input
+        type="text"
+        id="taskInput"
+        placeholder="Enter your task...">
 
-<select id="priority">
+    <select id="priority">
+        <option>High</option>
+        <option selected>Medium</option>
+        <option>Low</option>
+    </select>
 
-<option>High</option>
+    <input type="date" id="dueDate">
 
-<option selected>Medium</option>
+    <button id="addTaskBtn">
+        <i class="fa-solid fa-plus"></i>
+        Add Task
+    </button>
 
-<option>Low</option>
-
-</select>
-
-<input type="date" id="dueDate">
-
-<button id="addTaskBtn">
-
-<i class="fa-solid fa-plus"></i>
-
-Add Task
-
-</button>
+    <button id="updateTaskBtn" style="display:none;">
+        <i class="fa-solid fa-pen"></i>
+        Update
+    </button>
 
 </section>
 
