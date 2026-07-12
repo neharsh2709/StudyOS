@@ -197,3 +197,165 @@ header p{
 }
 
 /* Task list styles and responsive design will be added in the next part. */
+/* ================= Task List ================= */
+
+#taskList{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.task{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-left:6px solid var(--primary);
+    border-radius:16px;
+    padding:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s;
+    animation:fadeIn .4s ease;
+}
+
+.task:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+}
+
+.task-info{
+    flex:1;
+}
+
+.task-title{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.task-date{
+    color:var(--muted);
+    font-size:14px;
+}
+
+.task-actions{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+/* Priority */
+
+.priority{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+}
+
+.high{
+    background:#ef4444;
+}
+
+.medium{
+    background:#f59e0b;
+}
+
+.low{
+    background:#22c55e;
+}
+
+/* Buttons */
+
+.complete-btn,
+.delete-btn{
+    border:none;
+    cursor:pointer;
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    color:#fff;
+    font-size:16px;
+    transition:.3s;
+}
+
+.complete-btn{
+    background:#22c55e;
+}
+
+.delete-btn{
+    background:#ef4444;
+}
+
+.complete-btn:hover,
+.delete-btn:hover{
+    transform:scale(1.1);
+}
+
+/* Completed Task */
+
+.completed .task-title{
+    text-decoration:line-through;
+    color:var(--muted);
+}
+
+/* Footer */
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    color:var(--muted);
+    padding:20px;
+}
+
+footer b{
+    color:#ffd54f;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:900px){
+
+.sidebar{
+    width:100%;
+    height:auto;
+    position:relative;
+}
+
+.main{
+    margin-left:0;
+    width:100%;
+    padding:20px;
+}
+
+.task-form{
+    grid-template-columns:1fr;
+}
+
+.task{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.task-actions{
+    width:100%;
+    justify-content:flex-end;
+}
+
+}
