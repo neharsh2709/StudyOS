@@ -9,6 +9,7 @@ const taskInput = document.getElementById("taskInput");
 const priority = document.getElementById("priority");
 const dueDate = document.getElementById("dueDate");
 const addTaskBtn = document.getElementById("addTaskBtn");
+const updateTaskBtn = document.getElementById("updateTaskBtn");
 const taskList = document.getElementById("taskList");
 const searchTask = document.getElementById("searchTask");
 
@@ -103,6 +104,15 @@ function addTask(){
     priority.value="Medium";
 
 }
+function editTask(index){
+
+    editIndex = index;
+
+    taskInput.value = tasks[index].title;
+    priority.value = tasks[index].priority;
+    dueDate.value = tasks[index].date;
+
+}
 
 function toggleTask(index){
 
@@ -129,7 +139,7 @@ function deleteTask(index){
 }
 
 addTaskBtn.addEventListener("click",addTask);
-
+updateTaskBtn.addEventListener("click", addTask);
 searchTask.addEventListener("input",function(){
 
     renderTasks(this.value);
