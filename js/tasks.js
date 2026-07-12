@@ -4,7 +4,7 @@
 ========================================== */
 
 let tasks = JSON.parse(localStorage.getItem("studyos_tasks")) || [];
-
+let editIndex = -1;
 const taskInput = document.getElementById("taskInput");
 const priority = document.getElementById("priority");
 const dueDate = document.getElementById("dueDate");
